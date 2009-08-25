@@ -1,6 +1,6 @@
 package Number::Closest;
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 use Moose;
 
@@ -13,8 +13,6 @@ sub analyze {
     my @dist = sort { $a->[1] <=> $b->[1] } map { [$_, abs($_ - $self->number)] } @{$self->numbers} ;
 
     \@dist
-  
-
 }
 
 sub find {
@@ -114,6 +112,11 @@ L<http://search.cpan.org/dist/Number-Closest/>
 
 =head1 ACKNOWLEDGEMENTS
 
+=begin html
+
+<img src="http://dev.mysql.com/doc/sakila/en/images/sakila-schema.png">
+
+=end html
 
 =head1 COPYRIGHT & LICENSE
 
